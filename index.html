@@ -3,219 +3,53 @@
 
 <head>
     <meta charset="utf-8">
+    <title>GGSIPU</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Student Form</title>
-    <style>
-        body{
-            background-color:#D5B4B4;
-        }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
-
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
-
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-        .container {
-            max-width: 960px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-light">
-
-    <div class="container">
-        <main>
-            <div class="py-5 text-center">
-                <img class="d-block mx-auto mb-4" src="Usar_image.png" alt="" width="500px">
-                <h2>Reporting Form</h2>
-                <p class="lead">
-                    
-                </p>
-            </div>
-            
-            
-            <div class="col-md-7 col-lg-8">
-                <h4 class="mb-3">Details for Verification</h4>
-                <form action="index2.php" method="POST" class="needs-validation" novalidate >
-                    <div class="row g-3">
-                        <div class="col-sm-6">
-                            <label for="firstName" class="form-label">First name</label>
-                                <input name="firstName" type="text" class="form-control" id="firstName" placeholder="" required>
-                                <div class="invalid-feedback">
-                                    Valid first name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <label for="lastName" class="form-label">Last name</label>
-                                <input name="lastName" type="text" class="form-control" id="lastName" placeholder=""  required>
-                                <div class="invalid-feedback">
-                                    Valid last name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12">
-                                <label for="fatherName" class="form-label">Father name</label>
-                                <input name="fatherName" type="text" class="form-control"  placeholder="eg: Rakesh Sharma"  required>
-                                <div class="invalid-feedback">
-                                    Valid father name is required.
-                                </div>
-                            </div>
-                            <label for="dob" class="form-label">Date of Birth <span
-                                class="text-muted">(Required)</span></label>
-                                <input name="dob" type="text" class="form-control" placeholder="D.O.B">
-                            </div>
-                            <div class="col-12">
-                            <label for="aadhar" class="form-label">Aadhar Number<span
-                                    class="text-muted"> (Required)</span></label>
-                                    <input name="aadhar" type="text" class="form-control" placeholder="D.O.B">
-                        </div>
-
-                            <div class="col-12">
-                                <label for="applicationNo" class="form-label">Application Number</label>
-                                <div class="input-group has-validation">
-                                    <input name="applicationNo" type="number" class="form-control" id="applicationNo" placeholder="Application Number"
-                                        required>
-                                    <div class="invalid-feedback">
-                                        Your Application No is required.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="email" class="form-label">Email <span
-                                    class="text-muted">(Optional)</span></label>
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="you@example.com">
-                                    <div class="invalid-feedback">
-                                        Please enter a valid email address for shipping updates.
-                                    </div>
-                                </div>
-                            <div class="col-12">
-                                <label for="mobile" class="form-label">Mobile <span
-                                    class="text-muted"> * </span></label>
-                                    <input name="mobile" type="mobile" class="form-control" id="mobile" >
-                                </div>
-                            <div class="col-12">
-                                <label for="board12rollno" class="form-label">Class 12 Roll no. <span
-                                    class="text-muted">(Optional)</span></label>
-                                    <input name="board12rollno" type="board12rollno" class="form-control" id="board12rollno" placeholder="you@example.com">
-                                    
-                                </div>
-                                <div class="col-12">
-                                    <label for="feesDetails" class="form-label">Fees Details<span
-                                            class="text-muted"> (Required)</span></label>
-                                    <input  type="file" class="form-control" accept = ".pdf" placeholder="Collective pdf" >
-                                </div>
-                                <div class="col-12">
-                                    <label for="Registration" class="form-label">Registration Form<span
-                                            class="text-muted"> (Downloaded from GGSIPU Website)</span></label>
-                                    <input  type="file" class="form-control" accept = ".pdf" placeholder="Registration pdf" >
-                                </div>
-                                
-                                <div class="col-12">
-                                    <div class="col-12">
-                                        <label for="address proof" class="form-label">Address proof<span
-                                            class="text-muted"> (Required)</span></label>
-                                            <input type="file" class="form-control" accept = ".pdf" placeholder="pdf" >
-                                        </div>
-                                        <div class="col-12">
-                                            <label for="12 m" class="form-label">XII Marksheet/Certificate<span
-                                                class="text-muted"> (Required)</span></label>
-                                <input type="file" class="form-control" accept = ".pdf" placeholder="12th marksheet pdf" >
-                            </div>
-                            <div class="col-12">
-                                <label for="10 m" class="form-label">X Marksheet/Certificate<span
-                                        class="text-muted"> (Required)</span></label>
-                                <input type="file" class="form-control" accept = ".pdf" placeholder="10th marksheet pdf" >
-                            </div>
-                            <div class="col-12">
-                                <label for="Migration" class="form-label">Migration Certificate<span
-                                        class="text-muted"> (Required)</span></label>
-                                <input  type="file" class="form-control" accept = ".pdf" placeholder="Migration Certificate pdf" >
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <label for="state" class="form-label">State</label>
-                                <select class="form-select" id="state" required>
-                                    <option value="">Choose...</option>
-                                    <option>Delhi</option>
-                                    <option>Haryana</option>
-                                    <option>Uttar pradesh</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please provide a valid state.
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-                            </div>
-
-                        </div>
-
-            </div>
-        </main>
-
-        <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy; GGSIPU</p>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-        </footer>
+<body class="text-center">
+    <img class="absolute" src="https://raw.githubusercontent.com/2509abhi/GGSIPU_Project_addmission/main/Usar_image.png" alt="USAR">
+    <div class="container text-primary">
+        <form class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in to proceed</h1>
+            <label for="inputEmail" class="sr-only">Email Address</label>
+            <input type="email" id="inputEmail" class="form-control num" placeholder="eg: example@gmail.com" required>
+            <label for="authrization" class="sr-only">Designation</label>
+            <select aria-labelledby="state" class="form-control pos" required>
+                <option value="Slect">Select</option>
+                <option value="Admin">Admin</option>
+                <option value="Student">Student</option>
+            </select>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control pas" placeholder="Password" required>
+            <p class="bg-light text-danger">! Wrong Email/password</p>
+            <a href="#" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</a>
+            <p class="mt-5 mb-3 text-muted">&copy; GGSIPU</p>
+        </form>
     </div>
+    <script>
+        document.querySelector(".btn").addEventListener("click", function () {
 
+            if (document.querySelector(".pos").value == "Admin") {
+                if ((document.querySelector(".num").value == "demo1a@gmail.com" || document.querySelector(".pas").value == "1234") || (document.querySelector(".num").value == "demo2a@gmail.com" || document.querySelector(".pas").value == "1234"))
+                    document.querySelector(".btn").href = "admin.php";
+                else
+                    document.querySelector(".text-danger").style.display = "block";
 
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
-
-    <script src="checkout.js"></script>
+            }
+            else if (document.querySelector(".pos").value == "Student") {
+                if ((document.querySelector(".num").value == "demo1s@gmail.com" || document.querySelector(".pas").value == "5678") || (document.querySelector(".num").value == "demo2s@gmail.com" || document.querySelector(".pas").value == "5678"))
+                    document.querySelector(".btn").href = "student_form.html";
+                else
+                    document.querySelector(".text-danger").style.display = "block";
+                    
+                }
+                else
+                    document.querySelector(".text-danger").style.display = "block";
+        });
+    </script>
 </body>
 
 </html>
